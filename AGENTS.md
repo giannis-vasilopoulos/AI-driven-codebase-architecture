@@ -22,7 +22,7 @@ See docs/ARCHITECTURE.md for folder layout and data-flow rules (Apollo vs React 
 
 ## Non-negotiable rules
 
-1. No `any` without a `// TODO(reason):` comment.
+1. No `any`. Prefer `unknown`, generics, or a concrete type (or a typed codegen result) instead.
 2. GraphQL responses are always typed via codegen — never hand-write response interfaces.
 3. Server state (GraphQL or REST) stays in Apollo cache / React Query cache. Never copy it into useState or a global store "for convenience."
 4. New hooks, utilities, and non-trivial components need a test. See docs/TESTING.md.
