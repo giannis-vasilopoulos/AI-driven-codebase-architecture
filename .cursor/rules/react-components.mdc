@@ -1,0 +1,19 @@
+---
+description: React/Next.js component structure and conventions
+globs: ["**/*.tsx"]
+alwaysApply: false
+---
+
+# Component conventions
+
+- Server Components by default in app/; add "use client" only when the component needs state,
+  effects, or browser APIs.
+- One component per file, named export (no default exports).
+- Props typed with an explicit `interface ComponentNameProps`, not inline object types for
+  anything beyond 1-2 props.
+- Co-locate: Component.tsx, Component.test.tsx, and (if applicable) Component.stories.tsx in
+  the same folder.
+- Don't put data-fetching inside a leaf presentational component — fetch in the feature's
+  container/page and pass data down, or use the feature's own hook.
+- Formatting/lint style is enforced by ESLint + Prettier — don't restate style rules here,
+  `npm run lint` is the source of truth.

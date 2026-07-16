@@ -1,0 +1,17 @@
+---
+description: Test file conventions for Vitest/RTL/Playwright
+globs: ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts", "e2e/**"]
+alwaysApply: false
+---
+
+# Testing conventions
+
+- Vitest + React Testing Library for unit/integration; Playwright for e2e (e2e/ folder only).
+- Query by role/label/text the way a user would — avoid data-testid unless there's no
+  accessible alternative.
+- Mock GraphQL with MockedProvider (one mock per test case). Mock REST with MSW handlers under
+  __tests__/mocks.
+- Test behavior, not implementation: assert on rendered output and user-visible state changes,
+  not on internal hook calls.
+- A new hook or non-trivial component is not done until it has a test — see docs/TESTING.md
+  for exactly what needs coverage.
