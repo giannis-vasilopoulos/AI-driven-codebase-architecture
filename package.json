@@ -1,0 +1,36 @@
+{
+  "name": "ai-driven-codebase-architecture",
+  "version": "1.0.0",
+  "description": "Starter files for AI-assisted development. Copy them into a new project so agents and humans share the same architecture, testing, and workflow rules.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky",
+    "lint": "eslint .",
+    "format": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giannis-vasilopoulos/AI-driven-codebase-architecture.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giannis-vasilopoulos/AI-driven-codebase-architecture/issues"
+  },
+  "homepage": "https://github.com/giannis-vasilopoulos/AI-driven-codebase-architecture#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.7.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.7.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.5",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.64.0"
+  }
+}

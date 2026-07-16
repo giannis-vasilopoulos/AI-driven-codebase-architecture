@@ -18,7 +18,7 @@ description: Checklist for safely upgrading a dependency, especially major versi
 2. Upgrade one package (or one tightly-coupled group, e.g. `@apollo/client` + its codegen plugins)
    at a time. Never bump the whole dependency tree in one commit — if something breaks, you want
    to know which upgrade caused it.
-3. After each upgrade: run `npm install`, then check for peer dependency warnings. Don't ignore
+3. After each upgrade: run `pnpm install`, then check for peer dependency warnings. Don't ignore
    them — resolve or consciously accept them.
 4. Run the full definition-of-done: `pnpm typecheck`, `pnpm lint`, `pnpm test`,
    `pnpm build`. A version bump that "just installs" without running these isn't done.
@@ -35,7 +35,7 @@ description: Checklist for safely upgrading a dependency, especially major versi
 
 ## What not to do
 
-- Don't run a blanket `npm update` / `npx npm-check-updates -u` and commit the result as one diff.
+- Don't run a blanket `pnpm update` / `pnpx npm-check-updates -u` and commit the result as one diff.
 - Don't skip the changelog because "semver says it's a minor" — mistakes happen, and frameworks
   in particular sometimes ship behavior changes in minors.
 - Don't upgrade a dependency to unblock an unrelated task without flagging it as a separate,
