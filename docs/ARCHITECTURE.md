@@ -4,7 +4,7 @@
 
 ```
 app/                    # Next.js App Router routes, layouts, server components
-e2e/                    # End-to-end tests
+e2e/                    # End-to-end tests with Playwright
 features/               # Feature-scoped code: components, hooks, graphql ops, tests
 └── <feature>/
     ├── components/

@@ -14,13 +14,13 @@
 
 ## Commands
 
-- `npm run dev`
-- `npm run typecheck` — tsc --noEmit, must pass before any change is considered done
-- `npm run lint` — must pass before any change is considered done
-- `npm run test` — unit/integration
-- `npm run test:e2e` — Playwright
-- `npm run codegen` — regenerate GraphQL types after any schema/query change
-- `npm run build` — must succeed before merge
+- `pnpm dev`
+- `pnpm typecheck` — tsc --noEmit, must pass before any change is considered done
+- `pnpm lint` — must pass before any change is considered done
+- `pnpm test` — unit/integration
+- `pnpm test:e2e` — Playwright
+- `pnpm codegen` — regenerate GraphQL types after any schema/query change
+- `pnpm build` — must succeed before merge
 
 ## Architecture
 

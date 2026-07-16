@@ -16,4 +16,4 @@ alwaysApply: false
 - Don't put data-fetching inside a leaf presentational component — fetch in the feature's
   container/page and pass data down, or use the feature's own hook.
 - Formatting/lint style is enforced by ESLint + Prettier — don't restate style rules here,
-  `npm run lint` is the source of truth.
+  `pnpm lint` is the source of truth.
