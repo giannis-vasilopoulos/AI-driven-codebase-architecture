@@ -10,17 +10,11 @@
 - Apollo Client for GraphQL, React Query for REST endpoints
 - [Styling solution — Tailwind / CSS Modules / etc.]
 - Vitest + React Testing Library (unit/integration), Playwright (e2e)
-- [package manager: pnpm / npm / yarn]
+- [package manager: pnpm (recommended)]
 
 ## Commands
 
-- `pnpm dev`
-- `pnpm typecheck` — tsc --noEmit, must pass before any change is considered done
-- `pnpm lint` — must pass before any change is considered done
-- `pnpm test` — unit/integration
-- `pnpm test:e2e` — Playwright
-- `pnpm codegen` — regenerate GraphQL types after any schema/query change
-- `pnpm build` — must succeed before merge
+- See [package.json](package.json) for all commands.
 
 ## Architecture
 

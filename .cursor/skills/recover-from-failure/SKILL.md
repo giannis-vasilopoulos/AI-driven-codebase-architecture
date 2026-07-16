@@ -6,11 +6,13 @@ description: Playbook for recovering when a change breaks the build, fails tests
 # Recover from failure
 
 ## When to use this
-- `npm run typecheck`, `npm run lint`, `npm run test`, or `npm run build` starts failing after a change
+
+- `pnpm typecheck`, `pnpm lint`, `pnpm test`, or `pnpm build` starts failing after a change
 - An edit needs to be undone but there's other legitimate work-in-progress in the same branch
 - You're mid-task and something clearly went wrong
 
 ## Steps
+
 1. Stop making further edits. Don't "fix forward" blindly on top of a broken state.
 2. Run `git status` and `git diff` to see exactly what changed since the last known-good commit.
 3. Isolate: is the failure caused by the most recent edit, or something earlier? Use `git stash`
@@ -26,6 +28,7 @@ description: Playbook for recovering when a change breaks the build, fails tests
    needs cleaning up, that's a separate, deliberate step — not part of "fixing the build."
 
 ## What not to do
+
 - Don't delete and rewrite a whole file to "start clean" when only a few lines broke something —
   that destroys context (comments, other recent changes) that weren't the problem.
 - Don't silently revert an ADR-documented decision to make tests pass faster. If the fix requires
