@@ -31,8 +31,8 @@ See docs/ARCHITECTURE.md for folder layout and data-flow rules (Apollo vs React 
 
 ## File boundaries
 
-- Edit freely: src/features/**, src/components/**, src/hooks/**, src/lib/**, tests/\*\*
-- Regenerate, don't hand-edit: src/graphql/generated/\*\*
+- Edit freely: features/**, components/**, hooks/**, lib/**, tests/\*\*
+- Regenerate, don't hand-edit: graphql/generated/\*\*
 - Ask first: next.config.js, CI workflows, tsconfig.json
 - Never touch: .env\*, /secrets
 

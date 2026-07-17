@@ -3,3 +3,14 @@
 node_modules/
 pnpm-debug.log*
 dist/
+.next/
+coverage/
+*.tsbuildinfo
+
+# Env files - never commit real secrets. Keep the tracked example below.
+.env
+.env.*
+!.env.example
+
+# Personal, tool-specific agent notes (documented in CLAUDE.md)
+CLAUDE.local.md

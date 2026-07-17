@@ -9,12 +9,14 @@ CLAUDE.md and auto memory hold project-wide facts, but they don't track "where w
 specific multi-step task. This skill fills that gap.
 
 ## When to use this
+
 - The task is explicitly expected to span multiple sessions (e.g. "migrate all feature folders
   to the new data-fetching pattern")
 - The conversation is getting long and context compaction is likely
 - You're about to hand off to a fresh session or another person
 
 ## Steps
+
 1. Create or update `docs/progress/<task-slug>.md` with:
    - Goal (one sentence)
    - Done so far (bullet list, be specific — file paths, not "some components")
@@ -28,6 +30,7 @@ specific multi-step task. This skill fills that gap.
    task represented a real architectural decision worth keeping a permanent record of.
 
 ## Why a file instead of relying on memory
+
 Auto memory captures preferences and corrections, not task state, and isn't guaranteed to
 survive a fresh session the way a committed file does. For anything you'd be upset to lose
 track of mid-task, write it to disk.

@@ -3,6 +3,7 @@ import eslintConfigPrettier from "eslint-config-prettier";
 import globals from "globals";
 import tseslint from "typescript-eslint";
 import reactHooks from "eslint-plugin-react-hooks";
+import boundaries from "eslint-plugin-boundaries";
 
 export default tseslint.config(
   {
@@ -63,6 +64,51 @@ export default tseslint.config(
       "no-console": ["warn", { allow: ["warn", "error"] }],
       "prefer-const": "error",
       "no-duplicate-imports": "error",
+    },
+  },
+  {
+    files: ["**/*.{js,jsx,ts,tsx}"],
+    plugins: {
+      boundaries,
+    },
+    settings: {
+      "import/resolver": {
+        node: { extensions: [".js", ".jsx", ".ts", ".tsx"] },
+      },
+      "boundaries/legacy-templates": false,
+      "boundaries/elements": [
+        { type: "app", pattern: "app/*" },
+        { type: "feature", pattern: "features/*", capture: ["featureName"] },
+        {
+          type: "shared",
+          pattern: ["components/*", "hooks/*", "lib/*", "types/*"],
+        },
+      ],
+    },
+    rules: {
+      "boundaries/dependencies": [
+        "error",
+        {
+          default: "allow",
+          policies: [
+            {
+              from: { element: { type: "feature" } },
+              disallow: {
+                to: {
+                  element: {
+                    type: "feature",
+                    captured: {
+                      featureName: "!{{ from.element.captured.featureName }}",
+                    },
+                  },
+                },
+              },
+              message:
+                "A feature must not import another feature's internals. Promote shared code to components/, hooks/, or lib/.",
+            },
+          ],
+        },
+      ],
     },
   },
   eslintConfigPrettier,

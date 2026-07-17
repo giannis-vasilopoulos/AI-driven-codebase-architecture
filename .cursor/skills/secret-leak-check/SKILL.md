@@ -6,11 +6,13 @@ description: Scan staged or recent changes for accidentally committed secrets, A
 # Secret leak check
 
 ## When to use this
+
 - Right before `git commit`, especially after an agent made changes across several files
 - Right before opening a PR
 - After touching anything related to API clients, auth, config loading, or `.env*` files
 
 ## Steps
+
 1. Run `git status` and confirm no `.env`, `.env.local`, or similar file is staged. If one is,
    unstage it immediately — don't just "remember not to commit it," actually `git restore --staged`.
 2. Run `git diff --staged` (or `git diff` for uncommitted work) and scan for:
@@ -30,6 +32,7 @@ description: Scan staged or recent changes for accidentally committed secrets, A
    in the browser).
 
 ## Note on relying on this alone
+
 A skill is a checklist the agent follows when it remembers to — it's not a guarantee. For real
 protection, pair this with a deterministic pre-commit hook (`gitleaks`, `truffleHog`, or similar)
 that blocks the commit outright regardless of whether anyone remembered to check.

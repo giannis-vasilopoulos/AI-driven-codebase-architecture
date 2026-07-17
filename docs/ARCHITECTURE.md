@@ -33,10 +33,10 @@ types/                      # Shared types not generated from GraphQL
 ## Feature boundaries
 
 - Features don't import from each other's internals (features/checkout shouldn't reach into
-  features/cart/hooks/useCartItems). Shared logic gets promoted to src/hooks, src/lib, or
-  src/components.
-- Enforce this with an ESLint rule (e.g. eslint-plugin-boundaries or import/no-restricted-paths),
-  not just this doc — the doc explains why, the linter makes it actually stick.
+  features/cart/hooks/useCartItems). Shared logic gets promoted to hooks/, lib/, or
+  components/.
+- This is enforced by the `boundaries/dependencies` rule in [eslint.config.mjs](../eslint.config.mjs)
+  (eslint-plugin-boundaries), not just this doc — the doc explains why, the linter makes it stick.
 
 ## Naming
 

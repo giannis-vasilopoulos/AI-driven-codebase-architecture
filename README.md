@@ -4,7 +4,9 @@ Starter files for AI-assisted development. Copy them into a new project so agent
 
 ## What this is
 
-This repo is **not** a runnable application. There is no `package.json` or `src/` yet.
+This repo is **not** a runnable application. It ships tooling config (lint, format, hooks, CI)
+and conventions, but no framework dependencies or application source yet. The layout is
+root-level (`app/`, `features/`, `components/`, ...) — there is no `src/` directory.
 
 It **is** a bootstrap kit of:
 

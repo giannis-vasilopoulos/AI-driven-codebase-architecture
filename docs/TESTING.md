@@ -10,14 +10,14 @@
 ## What must have a test
 
 - Any hook with branching logic or side effects
-- Any utility in src/lib
+- Any utility in lib/
 - Any component with conditional rendering, form validation, or error states
 - Any GraphQL mutation's optimistic response / cache update logic
 
 ## What doesn't need one
 
 - Pure presentational components with no logic (a Badge that just renders a label)
-- Generated code (src/graphql/generated)
+- Generated code (graphql/generated)
 - One-off marketing/static pages
 
 ## Mocking conventions
