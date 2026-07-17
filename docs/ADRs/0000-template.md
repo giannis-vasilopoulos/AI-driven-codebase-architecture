@@ -1,4 +1,4 @@
-# ADR-0001: [Short title of the decision]
+# ADR-0000: [Short title of the decision]
 
 Status: Proposed | Accepted | Superseded by ADR-XXXX
 
