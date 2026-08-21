@@ -27,7 +27,7 @@
   "homepage": "https://github.com/giannis-vasilopoulos/AI-driven-codebase-architecture#readme",
   "devDependencies": {
     "@commitlint/cli": "^21.2.1",
-    "@commitlint/config-conventional": "^21.2.0",
+    "@commitlint/config-conventional": "^21.2.2",
     "@commitlint/types": "^21.2.0",
     "@eslint/js": "^10.0.1",
     "eslint": "^10.7.0",
